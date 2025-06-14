@@ -112,7 +112,7 @@ async function mostrasPokemon(pokemons) {
     <img class="circulo" src ="${
       pokemon.sprites.other["official-artwork"].front_default
     }">
-    <p>Number: 000${pokemon.id}</p>
+    <p>Number: ${pokemon.id}</p>
     
     `;
     // en height y weight divimos entre 1o el resultado y usamos el metodo toFixed para quitar los decimales eso lo hacemos por que queremos los resultados en kg y metros
