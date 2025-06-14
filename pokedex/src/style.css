@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul, ol {
+  list-style: none;
+}
+
+/* Remove default link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Make images easier to work with */
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for form elements */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* Remove animations and transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  width: 6rem;
+  height: 1.5rem;
+  border: 2px solid #00ffcc ;
+  border-radius: 12px;
+  background-image: linear-gradient(#5eeb83a0 20%, #57beeea0 70% );
+  font-family: "Orbitron";
+  color: #024446;
+  cursor: pointer;
+
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 42px;
+  justify-content: center;
+}
+#app {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 1rem;
+  justify-content: center;
+  background-color: #0a0f1c;
+  background-image: 
+    radial-gradient(#00ffe580 1px, transparent 1px),
+    radial-gradient(#00ffe510 1px, transparent 1px);
+  background-size: 40px 40px, 20px 20px;
+  background-position: 0 0, 10px 10px;
+  animation: backgroundMove 40s linear infinite;
+}
+
+@keyframes backgroundMove {
+  from {
+    background-position: 0 0, 10px 10px;
+  }
+  to {
+    background-position: 100px 100px, 110px 110px;
+  }
+}
+.pokeCard{
+  text-align: center;
+  padding: 1rem;
+  color: #00bfff;
+  gap: 10px;
+  border: 3px solid #03baf7;
+  border-radius: 12px ;
+  background-image:linear-gradient(#1c1c1ea0 20%, #029ccf7b 70% );
+  width: 200px;
+  filter: drop-shadow(12px 12px 10px #1dc7d0);
+  font-family: "Orbitron";
+  font-style: italic;
+  box-shadow: 0 0 10px #00ffcc;
+  &:hover{
+    transform: scale(1.07);
+    transition: 0.5s;
+    border: 3px outset #00ffcc;
+    cursor: pointer;
+  }
+}
+.circulo{
+  background-image: linear-gradient(#00ffcc83 20%, #03baf799 60% );
+  border-radius:30px;
+  border: 2px solid #00f7ff;
+  width: 200px;
+  filter: drop-shadow(10px 12px 0px #03baf799);
+  
+}
+
+.titulo{
+  filter: drop-shadow(12px 12px 2px #03baf799);
+}
+
+.box-pokemon{
+  display: flex;
+  width: 50vh;
+  height: 50vh;
+  border: 2px solid #00ffcc;
+  border-radius: 12px;
+  background-image: linear-gradient(#57c8ed99 50%, #6bffe18d 60%);
+}
+
+.invisible{
+  display: none;
+}
+
+.visible{
+  display: flex; /* o block, según el diseño */
+  position: fixed;
+  top: 100px;
+  left: -1;
+  width: 60%;
+  height: 60%;
+  background-color: rgba(0, 0, 0, 0.7); /* semitransparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.name-box{
+
+display: flex;
+justify-content: center;
+margin-inline-start: 200px;
+font-size: 20px;
+color:#00ffcc ;
+font-style: italic;
+filter: drop-shadow(12px 4px 10px #57c7ed);
+
+}
+
+.img-box{
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  filter: drop-shadow(12px 4px 30px #00ffcc);
+  margin-inline-start: 14rem;
+}
+
+.stats{
+
+  width: 200px;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 23px;
+  border: 6px outset #02bdfb;
+  padding: 10px;
+  color: white;
+  background-color: #00fffb9d;
+  font-style: italic;
+  border-radius: 20px;
+}
+
+
+.type{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #00fffb;
+  color: #00ffcc;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  font-family: monospace;
+  font-style: italic;
+  font-weight: 800;
+  font-size: 12px;
+  background-color: #159094;
+  width: 200px;
+  height: 20px;
+}
+
+.box-right{
+  display: flex;
+  justify-content: center;
+  align-items: s;
+  flex-direction: column;
+  width: 100px;
+}
